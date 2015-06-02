@@ -16,8 +16,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func experiment() {
-       let nextController = UIImagePickerController()
-        self.presentViewController(nextController, animated: true, completion: nil)
+        let controller = UIAlertController()
+        controller.title = "Welcome to the title of our Alert Modal"
+        controller.message = "This is a test to make sure that the text area will auto size with the modal and will not just go of of the screen line break and more text"
+        
+        let okAction = UIAlertAction(title: "ok", style: UIAlertActionStyle.Default) { action in self.dismissViewControllerAnimated(true, completion: nil)}
+        
+        controller.addAction(okAction)
+        self.presentViewController(controller, animated: true, completion: nil)
     }
 
 
