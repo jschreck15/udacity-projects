@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57D685771B20B128003ECDF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D685761B20B128003ECDF7 /* AppDelegate.swift */; };
-		57D685791B20B128003ECDF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D685781B20B128003ECDF7 /* ViewController.swift */; };
+		57D685791B20B128003ECDF7 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D685781B20B128003ECDF7 /* ChoiceViewController.swift */; };
 		57D6857C1B20B128003ECDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D6857A1B20B128003ECDF7 /* Main.storyboard */; };
 		57D6857E1B20B128003ECDF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D6857D1B20B128003ECDF7 /* Images.xcassets */; };
 		57D685811B20B128003ECDF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57D6857F1B20B128003ECDF7 /* LaunchScreen.xib */; };
@@ -30,7 +30,7 @@
 		57D685711B20B128003ECDF7 /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D685751B20B128003ECDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57D685761B20B128003ECDF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57D685781B20B128003ECDF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57D685781B20B128003ECDF7 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		57D6857B1B20B128003ECDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57D6857D1B20B128003ECDF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		57D685801B20B128003ECDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				57D685761B20B128003ECDF7 /* AppDelegate.swift */,
-				57D685781B20B128003ECDF7 /* ViewController.swift */,
+				57D685781B20B128003ECDF7 /* ChoiceViewController.swift */,
 				57D685961B20B223003ECDF7 /* ResultsViewController.swift */,
 				57D6857A1B20B128003ECDF7 /* Main.storyboard */,
 				57D6857D1B20B128003ECDF7 /* Images.xcassets */,
@@ -216,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D685791B20B128003ECDF7 /* ViewController.swift in Sources */,
+				57D685791B20B128003ECDF7 /* ChoiceViewController.swift in Sources */,
 				57D685771B20B128003ECDF7 /* AppDelegate.swift in Sources */,
 				57D685971B20B223003ECDF7 /* ResultsViewController.swift in Sources */,
 			);
