@@ -2,8 +2,8 @@
 //  RoshamboTests.swift
 //  RoshamboTests
 //
-//  Created by Jorden Schreck on 6/4/15.
-//  Copyright (c) 2015 Jorden Schreck. All rights reserved.
+//  Created by Chrisna Aing on 2/21/15.
+//  Copyright (c) 2015 Chrisna Aing. All rights reserved.
 //
 
 import UIKit
