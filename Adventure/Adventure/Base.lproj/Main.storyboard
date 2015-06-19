@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xMw-Hd-6cP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oRk-yH-e3U">
+            <objects>
+                <navigationController id="xMw-Hd-6cP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dbX-tf-0SV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6jU-K7-fGt" kind="relationship" relationship="rootViewController" id="sAb-hA-Fgq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eC-gD-oSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="haW-1r-gNH">
+            <objects>
+                <viewController id="6jU-K7-fGt" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qpu-zG-MWV"/>
+                        <viewControllerLayoutGuide type="bottom" id="ySI-RW-Hkd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZXj-Nc-gyz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyV-fd-mIP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="hd1-nr-u8p"/>
+                                    <constraint firstAttribute="height" constant="30" id="jMh-vY-Zxj"/>
+                                </constraints>
+                                <state key="normal" title="Leap through the door and roar!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hd1-nr-u8p"/>
+                                        <exclude reference="jMh-vY-Zxj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="hd1-nr-u8p"/>
+                                        <include reference="jMh-vY-Zxj"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="eW9-Jp-HQ1" kind="show" id="XYr-99-Fbw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLY-pS-Db8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="9hq-qW-h7v"/>
+                                    <constraint firstAttribute="height" constant="30" id="bGu-xf-3mi"/>
+                                </constraints>
+                                <state key="normal" title="Stalk to the door, peek down the hallway.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9hq-qW-h7v"/>
+                                        <exclude reference="bGu-xf-3mi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9hq-qW-h7v"/>
+                                        <include reference="bGu-xf-3mi"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="EG0-gS-IPl" kind="show" id="mac-pG-H36"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lU4-Mc-cxJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">An immense tiger wakes in an empty room.
+
+A door opens into a hallway...
+
+What should she do?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="99" width="240" height="277"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="pyV-fd-mIP" secondAttribute="centerX" id="09T-b7-kns"/>
+                            <constraint firstAttribute="centerX" secondItem="BLY-pS-Db8" secondAttribute="centerX" id="1yi-6l-n2m"/>
+                            <constraint firstItem="ySI-RW-Hkd" firstAttribute="top" secondItem="pyV-fd-mIP" secondAttribute="bottom" constant="175" id="IW0-zF-POk"/>
+                            <constraint firstItem="ySI-RW-Hkd" firstAttribute="top" secondItem="BLY-pS-Db8" secondAttribute="bottom" constant="92" id="jPj-AU-kBn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pyV-fd-mIP"/>
+                                <exclude reference="BLY-pS-Db8"/>
+                                <exclude reference="lU4-Mc-cxJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="IW0-zF-POk"/>
+                                <exclude reference="jPj-AU-kBn"/>
+                                <exclude reference="1yi-6l-n2m"/>
+                                <exclude reference="09T-b7-kns"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="pyV-fd-mIP"/>
+                                <include reference="BLY-pS-Db8"/>
+                                <include reference="lU4-Mc-cxJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="IW0-zF-POk"/>
+                                <include reference="jPj-AU-kBn"/>
+                                <include reference="1yi-6l-n2m"/>
+                                <include reference="09T-b7-kns"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="74B-g3-r3A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzw-fV-qAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kSd-52-CqM">
+            <objects>
+                <viewController id="eW9-Jp-HQ1" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pao-eI-MD2"/>
+                        <viewControllerLayoutGuide type="bottom" id="mDm-2L-JTH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1NB-Hw-Yb7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEb-lG-19u">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="bmk-1A-fze"/>
+                                    <constraint firstAttribute="height" constant="30" id="wQJ-pb-SjR"/>
+                                </constraints>
+                                <state key="normal" title="Turn Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bmk-1A-fze"/>
+                                        <exclude reference="wQJ-pb-SjR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bmk-1A-fze"/>
+                                        <include reference="wQJ-pb-SjR"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-ks-GXv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="368" id="Loo-rZ-q2m"/>
+                                    <constraint firstAttribute="height" constant="30" id="xda-Ol-qEQ"/>
+                                </constraints>
+                                <state key="normal" title="Turn Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Loo-rZ-q2m"/>
+                                        <exclude reference="xda-Ol-qEQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Loo-rZ-q2m"/>
+                                        <include reference="xda-Ol-qEQ"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ojl-5J-P3u">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You look around...
+
+and nothing is there.
+
+Which way should we go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="99" width="240" height="277"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="HEb-lG-19u" secondAttribute="centerX" id="7mM-KI-YoR"/>
+                            <constraint firstAttribute="centerX" secondItem="1R9-ks-GXv" secondAttribute="centerX" id="Mg6-DZ-MLT"/>
+                            <constraint firstItem="mDm-2L-JTH" firstAttribute="top" secondItem="HEb-lG-19u" secondAttribute="bottom" constant="175" id="U6P-W2-064"/>
+                            <constraint firstItem="mDm-2L-JTH" firstAttribute="top" secondItem="1R9-ks-GXv" secondAttribute="bottom" constant="92" id="waU-CJ-Vls"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="HEb-lG-19u"/>
+                                <exclude reference="1R9-ks-GXv"/>
+                                <exclude reference="Ojl-5J-P3u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="U6P-W2-064"/>
+                                <exclude reference="waU-CJ-Vls"/>
+                                <exclude reference="Mg6-DZ-MLT"/>
+                                <exclude reference="7mM-KI-YoR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="HEb-lG-19u"/>
+                                <include reference="1R9-ks-GXv"/>
+                                <include reference="Ojl-5J-P3u"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="U6P-W2-064"/>
+                                <include reference="waU-CJ-Vls"/>
+                                <include reference="Mg6-DZ-MLT"/>
+                                <include reference="7mM-KI-YoR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="q6X-X6-LTQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNw-iX-Hj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="98"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DwY-62-vYK">
+            <objects>
+                <viewController id="EG0-gS-IPl" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EFi-ff-bQ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="GyQ-tD-kxb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RYT-d4-xUx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-4k-558">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Oh NO! 
+You were shot and killed by the sniper..
+Better luck next time!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="99" width="240" height="277"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ygc-4k-558"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ygc-4k-558"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="aZe-UA-GkJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJI-dj-vWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="928"/>
+        </scene>
+    </scenes>
+</document>
