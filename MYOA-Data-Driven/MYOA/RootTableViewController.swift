@@ -17,7 +17,7 @@ class RootTableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
         // Initialize the Adventures
         let adventurePlistPaths = NSBundle.mainBundle().pathsForResourcesOfType("plist", inDirectory: nil) as! [String]
         
@@ -35,7 +35,7 @@ class RootTableViewController: UITableViewController {
         super.viewDidAppear(true)
         self.tableView.reloadData()
     }
-
+    
     // MARK: - UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,7 +50,7 @@ class RootTableViewController: UITableViewController {
         cell.detailTextLabel!.text = adventure.credits.author
         var imageName = adventure.credits.imageName
         cell.imageView!.image = UIImage(named: imageName!)
-                
+        
         return cell
     }
     
@@ -61,9 +61,9 @@ class RootTableViewController: UITableViewController {
         
         // Get the first node
         let firstNodeInTheAdventure = selectedAdventure.startNode
-
+        
         // Get a StoryNodeController from the Storyboard
-        let storyNodeController = self.storyboard!.instantiateViewControllerWithIdentifier("StoryNodeViewController")as! StoryNodeViewController
+        let storyNodeController = self.storyboard!.instantiateViewControllerWithIdentifier("StoryNodeViewController") as! StoryNodeViewController
         
         // Set the story node so that we will see the start of the story
         storyNodeController.storyNode = firstNodeInTheAdventure
