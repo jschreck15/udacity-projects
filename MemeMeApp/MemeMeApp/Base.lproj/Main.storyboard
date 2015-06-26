@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPE-e5-olP">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTd-FW-BIx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iFG-4k-qEq"/>
+                                    <barButtonItem title="Pick" id="Cfl-fb-TeB">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="yUw-ZS-ln2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Fi5-BF-cxJ"/>
+                                    <barButtonItem systemItem="camera" id="y4j-UW-Swz"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gWF-gB-CtW"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DTd-FW-BIx" firstAttribute="top" secondItem="bPE-e5-olP" secondAttribute="bottom" constant="220" id="5MS-5I-Cae"/>
+                            <constraint firstItem="bPE-e5-olP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="LNa-me-Ew6"/>
+                            <constraint firstItem="bPE-e5-olP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="Oun-gK-bjq"/>
+                            <constraint firstItem="DTd-FW-BIx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="cRs-Hp-5gD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bPE-e5-olP" secondAttribute="trailing" constant="34" id="sBA-4B-CWA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DTd-FW-BIx" secondAttribute="bottom" id="tW7-c5-ZCJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DTd-FW-BIx" secondAttribute="trailing" constant="-16" id="z5o-Gs-ARZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bPE-e5-olP"/>
+                                <exclude reference="DTd-FW-BIx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="LNa-me-Ew6"/>
+                                <exclude reference="Oun-gK-bjq"/>
+                                <exclude reference="sBA-4B-CWA"/>
+                                <exclude reference="5MS-5I-Cae"/>
+                                <exclude reference="cRs-Hp-5gD"/>
+                                <exclude reference="z5o-Gs-ARZ"/>
+                                <exclude reference="tW7-c5-ZCJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bPE-e5-olP"/>
+                                <include reference="DTd-FW-BIx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="LNa-me-Ew6"/>
+                                <include reference="Oun-gK-bjq"/>
+                                <include reference="sBA-4B-CWA"/>
+                                <include reference="5MS-5I-Cae"/>
+                                <include reference="cRs-Hp-5gD"/>
+                                <include reference="z5o-Gs-ARZ"/>
+                                <include reference="tW7-c5-ZCJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imagePickerView" destination="bPE-e5-olP" id="X3Y-HC-n2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

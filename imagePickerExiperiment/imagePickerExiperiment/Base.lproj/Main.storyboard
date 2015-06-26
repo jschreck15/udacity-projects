@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -65,18 +66,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="y09-Ek-0Zb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="66K-l3-uGS"/>
-                            <constraint firstItem="ihH-Zl-A6b" firstAttribute="centerX" secondItem="y09-Ek-0Zb" secondAttribute="centerX" id="7Rm-ke-m4d"/>
+                            <constraint firstItem="ihH-Zl-A6b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7ce-ic-qx0"/>
+                            <constraint firstItem="ihH-Zl-A6b" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="9Xx-pX-rdh"/>
                             <constraint firstItem="GE5-0H-txA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="ERu-h6-rIQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GE5-0H-txA" secondAttribute="trailing" constant="30" id="G4a-qp-UWN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y09-Ek-0Zb" secondAttribute="trailing" constant="30" id="GT7-av-Rvw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FAk-mY-vQi" secondAttribute="trailing" constant="30" id="HWu-Ib-Tzc"/>
-                            <constraint firstItem="ihH-Zl-A6b" firstAttribute="top" secondItem="y09-Ek-0Zb" secondAttribute="bottom" constant="123" id="PHe-kg-ilH"/>
                             <constraint firstItem="FAk-mY-vQi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="SDa-7B-az0"/>
                             <constraint firstItem="FAk-mY-vQi" firstAttribute="top" secondItem="GE5-0H-txA" secondAttribute="bottom" constant="9" id="WCf-9m-pq9"/>
+                            <constraint firstItem="ihH-Zl-A6b" firstAttribute="centerX" secondItem="y09-Ek-0Zb" secondAttribute="centerX" id="n6Z-AB-GtY"/>
                             <constraint firstItem="GE5-0H-txA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="uf8-f2-MOv"/>
-                            <constraint firstItem="ihH-Zl-A6b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vFT-Vb-tvi"/>
                             <constraint firstItem="y09-Ek-0Zb" firstAttribute="top" secondItem="FAk-mY-vQi" secondAttribute="bottom" constant="8" id="wsW-Zi-KUJ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ihH-Zl-A6b" secondAttribute="bottom" id="yS1-H8-OA3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -95,10 +95,9 @@
                                 <exclude reference="66K-l3-uGS"/>
                                 <exclude reference="GT7-av-Rvw"/>
                                 <exclude reference="wsW-Zi-KUJ"/>
-                                <exclude reference="7Rm-ke-m4d"/>
-                                <exclude reference="PHe-kg-ilH"/>
-                                <exclude reference="vFT-Vb-tvi"/>
-                                <exclude reference="yS1-H8-OA3"/>
+                                <exclude reference="7ce-ic-qx0"/>
+                                <exclude reference="9Xx-pX-rdh"/>
+                                <exclude reference="n6Z-AB-GtY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -118,10 +117,9 @@
                                 <include reference="66K-l3-uGS"/>
                                 <include reference="GT7-av-Rvw"/>
                                 <include reference="wsW-Zi-KUJ"/>
-                                <include reference="7Rm-ke-m4d"/>
-                                <include reference="PHe-kg-ilH"/>
-                                <include reference="vFT-Vb-tvi"/>
-                                <include reference="yS1-H8-OA3"/>
+                                <include reference="7ce-ic-qx0"/>
+                                <include reference="9Xx-pX-rdh"/>
+                                <include reference="n6Z-AB-GtY"/>
                             </mask>
                         </variation>
                     </view>
