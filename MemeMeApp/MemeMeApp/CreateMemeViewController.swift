@@ -20,54 +20,6 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var navbar: UINavigationBar!
     var memeImage: UIImage!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Top Text Field
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.text = "TOP"
-        topTextField.textAlignment = .Center
-        
-        // Bottom Text Field
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.text = "BOTTOM"
-        bottomTextField.textAlignment = .Center
-        shareMemeButton.enabled = false
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        // Subscribe to keyboard notifications to allow the view to raise when necessary
-        self.subscribeToKeyboardNotifications()
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
-    }
-    
-    // IBActions
-
-    @IBAction func pickAnImageFromAlbum(sender: AnyObject) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    @IBAction func pickAnImageFromCamera(sender: AnyObject) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    @IBAction func shareMeme(sender: AnyObject) {
-        var memedImage = generateMemedImage()
-        let ActivityVC = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-        self.presentViewController(ActivityVC, animated: true, completion: nil)
-    }
-    
     // MEME Text Attributes
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
@@ -75,6 +27,62 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
         NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeWidthAttributeName : -3.0
     ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Top Text Field Editing
+        topTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.text = "TOP"
+        topTextField.textAlignment = .Center
+        
+        // Bottom Text Field Editing
+        bottomTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.text = "BOTTOM"
+        bottomTextField.textAlignment = .Center
+        
+        // Disable the Share Meme Button to start
+        shareMemeButton.enabled = false
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        
+        // Subscribe to keyboard notifications to allow the view to raise when necessary
+        self.subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Unsubscribe to keyboard notifications to allow the view to lower when necessary
+        self.unsubscribeFromKeyboardNotifications()
+    }
+    
+    // IBActions
+
+    
+    // Pick Image from the users album
+    @IBAction func pickAnImageFromAlbum(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    // Pick Image from the camera
+    @IBAction func pickAnImageFromCamera(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    // Share the meme
+    @IBAction func shareMeme(sender: AnyObject) {
+        var memedImage = generateMemedImage()
+        let ActivityVC = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        self.presentViewController(ActivityVC, animated: true, completion: nil)
+    }
     
     // Subscribe to Keyboard Function
     func subscribeToKeyboardNotifications() {
@@ -138,7 +146,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     
     func save() {
         let memedImage = generateMemedImage()
-        meme = Meme(topMemeText: topTextField.text, bottomMemeText: bottomTextField.text, originalImage: imagePickerView.image!, memedImage: memedImage)
+        var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imagePickerView.image!, memedImage: memedImage)
         
     }
     
