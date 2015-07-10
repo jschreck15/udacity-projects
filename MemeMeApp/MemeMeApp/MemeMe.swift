@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-//Meme Class
-class Meme : NSObject {
+//Meme Struct
+public struct Meme : NSObject {
     var topText:String?
     var bottomText:String?
     var originalImage:UIImage?

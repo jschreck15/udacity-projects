@@ -20,6 +20,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var navbar: UINavigationBar!
     var memeImage: UIImage!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Top Text Field
@@ -137,7 +138,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     
     func save() {
         let memedImage = generateMemedImage()
-        var meme = Meme(topMemeText: topTextField.text, bottomMemeText: bottomTextfield.text, originalImage: imagePickerView.image!, memedImage: memedImage)
+        meme = Meme(topMemeText: topTextField.text, bottomMemeText: bottomTextField.text, originalImage: imagePickerView.image!, memedImage: memedImage)
         
     }
     
